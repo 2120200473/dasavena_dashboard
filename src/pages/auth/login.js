@@ -97,7 +97,7 @@ const Page = () => {
               sx={{ mb: 3 }}
             >
               <Typography variant="h4">
-                Login para Proveedores
+                Login para Proveed
               </Typography>
               <Typography
                 color="text.secondary"
