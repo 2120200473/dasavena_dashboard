@@ -85,7 +85,7 @@ export const Layout = (props) => {
                 sx={{ color: '#15B79E' }}
                 target="_blank"
               >
-                panel de administración de Dasavena
+                Panel de administración de Dasavena
               </Box>
             </Typography>
             <Typography
@@ -93,12 +93,12 @@ export const Layout = (props) => {
               sx={{ mb: 3 }}
               variant="subtitle1"
             >
-              Un panel para tu mayor facilidad como proveedor.
+              Un panel para tu mayor facilidad en la administración.
             </Typography>
-            <img
+            <center><img
               alt=""
               src="/assets/logos/logo-dasavena.png"
-            />
+            /></center>
           </Box>
         </Grid>
       </Grid>

@@ -97,7 +97,7 @@ const Page = () => {
               sx={{ mb: 3 }}
             >
               <Typography variant="h4">
-                Login para Proveed
+                Inciar Sesión
               </Typography>
               <Typography
                 color="text.secondary"
@@ -147,7 +147,7 @@ const Page = () => {
                   />
                 </Stack>
                 <FormHelperText sx={{ mt: 1 }}>
-                  Si aun no tienes cuenta, contactanós a través de nuestro correo electrónico: soporte@dasavena.com
+                  Si aun no cuentas con tu acceso, contactanós a través de nuestro correo electrónico: soporte@dasavena.com
                 </FormHelperText>
                 {formik.errors.submit && (
                   <Typography

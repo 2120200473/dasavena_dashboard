@@ -16,6 +16,8 @@ import {
 } from '@mui/material';
 import { Scrollbar } from 'src/components/scrollbar';
 import { getInitials } from 'src/utils/get-initials';
+import { Button } from '@mui/material';
+
 
 export const CustomersTable = (props) => {
   const {
@@ -56,16 +58,19 @@ export const CustomersTable = (props) => {
                   />
                 </TableCell>
                 <TableCell>
-                  Name
+                  id
+                </TableCell>
+                <TableCell>
+                  Nombre
+                </TableCell>
+                <TableCell>
+                  Telefono
                 </TableCell>
                 <TableCell>
                   Email
                 </TableCell>
                 <TableCell>
-                  Location
-                </TableCell>
-                <TableCell>
-                  Phone
+                  Celular
                 </TableCell>
                 <TableCell>
                   Signed Up
@@ -96,31 +101,43 @@ export const CustomersTable = (props) => {
                       />
                     </TableCell>
                     <TableCell>
+                      <Typography variant="subtitle2">
+                            {customer.id}
+                          </Typography>
+                    </TableCell>
+                    
+                    <TableCell>
                       <Stack
                         alignItems="center"
                         direction="row"
                         spacing={2}
                       >
-                        <Avatar src={customer.avatar}>
-                          {getInitials(customer.name)}
-                        </Avatar>
                         <Typography variant="subtitle2">
                           {customer.name}
                         </Typography>
                       </Stack>
                     </TableCell>
                     <TableCell>
-                      {customer.email}
-                    </TableCell>
-                    <TableCell>
-                      {customer.address.city}, {customer.address.state}, {customer.address.country}
-                    </TableCell>
-                    <TableCell>
                       {customer.phone}
                     </TableCell>
                     <TableCell>
+                      {customer.email}
+                    </TableCell>
+                    <TableCell>
+                      {customer.celular}
+                    </TableCell>
+
+                    <TableCell>
                       {createdAt}
                     </TableCell>
+                    <TableCell>
+                    <Button
+                      variant="contained"
+                      onClick={() => handleViewProfile(customer.id)} // Reemplaza handleViewProfile con la función adecuada
+                    >
+                      Ver Expediente
+                    </Button>
+                  </TableCell>
                   </TableRow>
                 );
               })}

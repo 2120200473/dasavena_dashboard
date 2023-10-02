@@ -15,21 +15,21 @@ const now = new Date();
 
 const data = [
   {
-    id: '5e887ac47eed253091be10cb',
+    id: '1dgp',
     address: {
-      city: 'Cleveland',
-      country: 'USA',
-      state: 'Ohio',
-      street: '2849 Fulton Street'
+      city: 'Monterrey',
+      country: 'México',
+      state: 'Nuevo León',
+      street: 'Calle Benito Juarez, No. 23'
     },
-    avatar: '/assets/avatars/avatar-carson-darrin.png',
     createdAt: subDays(subHours(now, 7), 1).getTime(),
-    email: 'carson.darrin@devias.io',
-    name: 'Carson Darrin',
-    phone: '304-428-3097'
+    email: 'peter.pan@dasavena.com',
+    name: 'Peter Pan Gonzalez',
+    phone: '33-32-34-56-78',
+    celular: '33-24-56-43-23'
   },
   {
-    id: '5e887b209c28ac3dd97f6db5',
+    id: '2dgp',
     address: {
       city: 'Atlanta',
       country: 'USA',
@@ -38,12 +38,13 @@ const data = [
     },
     avatar: '/assets/avatars/avatar-fran-perez.png',
     createdAt: subDays(subHours(now, 1), 2).getTime(),
-    email: 'fran.perez@devias.io',
-    name: 'Fran Perez',
-    phone: '712-351-5711'
+    email: 'pedro.pica@dasavena.com',
+    name: 'Pedro Picapiedra Juarez',
+    phone: '33-32-34-45-38',
+    celular: '33-24-56-21-22'
   },
   {
-    id: '5e887b7602bdbc4dbb234b27',
+    id: '3dgp',
     address: {
       city: 'North Canton',
       country: 'USA',
@@ -52,12 +53,13 @@ const data = [
     },
     avatar: '/assets/avatars/avatar-jie-yan-song.png',
     createdAt: subDays(subHours(now, 4), 2).getTime(),
-    email: 'jie.yan.song@devias.io',
-    name: 'Jie Yan Song',
-    phone: '770-635-2682'
+    email: 'goku.naza@dasavena.com',
+    name: 'Goku Nazaret Vergara',
+    phone: '33-32-34-35-90',
+    celular: '33-24-56-60-90'
   },
   {
-    id: '5e86809283e28b96d2d38537',
+    id: '4dgp',
     address: {
       city: 'Madrid',
       country: 'Spain',
@@ -66,12 +68,13 @@ const data = [
     },
     avatar: '/assets/avatars/avatar-anika-visser.png',
     createdAt: subDays(subHours(now, 11), 2).getTime(),
-    email: 'anika.visser@devias.io',
-    name: 'Anika Visser',
-    phone: '908-691-3242'
+    email: 'vegeta.campos@dasavena.com',
+    name: 'Vegeta Campos Garcia',
+    phone: '33-32-45-78-90',
+    celular: '33-24-98-65-32'
   },
   {
-    id: '5e86805e2bafd54f66cc95c3',
+    id: '5dgp',
     address: {
       city: 'San Diego',
       country: 'USA',
@@ -80,12 +83,13 @@ const data = [
     },
     avatar: '/assets/avatars/avatar-miron-vitold.png',
     createdAt: subDays(subHours(now, 7), 3).getTime(),
-    email: 'miron.vitold@devias.io',
-    name: 'Miron Vitold',
-    phone: '972-333-4106'
+    email: 'nestor.grande@dasavena.com',
+    name: 'Nestor Grande Gomez',
+    phone: '33-23-78-65-43',
+    celular: '33-22-33-45-78'
   },
   {
-    id: '5e887a1fbefd7938eea9c981',
+    id: '6dgp',
     address: {
       city: 'Berkeley',
       country: 'USA',
@@ -94,12 +98,13 @@ const data = [
     },
     avatar: '/assets/avatars/avatar-penjani-inyene.png',
     createdAt: subDays(subHours(now, 5), 4).getTime(),
-    email: 'penjani.inyene@devias.io',
-    name: 'Penjani Inyene',
-    phone: '858-602-3409'
+    email: 'brandon.perez@dasavena.com',
+    name: 'Brandon Perez Leon',
+    phone: '33-78-65-32-12',
+    celular: '33-24-56-90-91'
   },
   {
-    id: '5e887d0b3d090c1b8f162003',
+    id: '7dgp',
     address: {
       city: 'Carson City',
       country: 'USA',
@@ -108,51 +113,10 @@ const data = [
     },
     avatar: '/assets/avatars/avatar-omar-darboe.png',
     createdAt: subDays(subHours(now, 15), 4).getTime(),
-    email: 'omar.darobe@devias.io',
-    name: 'Omar Darobe',
-    phone: '415-907-2647'
-  },
-  {
-    id: '5e88792be2d4cfb4bf0971d9',
-    address: {
-      city: 'Los Angeles',
-      country: 'USA',
-      state: 'California',
-      street: '1798  Hickory Ridge Drive'
-    },
-    avatar: '/assets/avatars/avatar-siegbert-gottfried.png',
-    createdAt: subDays(subHours(now, 2), 5).getTime(),
-    email: 'siegbert.gottfried@devias.io',
-    name: 'Siegbert Gottfried',
-    phone: '702-661-1654'
-  },
-  {
-    id: '5e8877da9a65442b11551975',
-    address: {
-      city: 'Murray',
-      country: 'USA',
-      state: 'Utah',
-      street: '3934  Wildrose Lane'
-    },
-    avatar: '/assets/avatars/avatar-iulia-albu.png',
-    createdAt: subDays(subHours(now, 8), 6).getTime(),
-    email: 'iulia.albu@devias.io',
-    name: 'Iulia Albu',
-    phone: '313-812-8947'
-  },
-  {
-    id: '5e8680e60cba5019c5ca6fda',
-    address: {
-      city: 'Salt Lake City',
-      country: 'USA',
-      state: 'Utah',
-      street: '368 Lamberts Branch Road'
-    },
-    avatar: '/assets/avatars/avatar-nasimiyu-danai.png',
-    createdAt: subDays(subHours(now, 1), 9).getTime(),
-    email: 'nasimiyu.danai@devias.io',
-    name: 'Nasimiyu Danai',
-    phone: '801-301-7894'
+    email: 'bob.esponja@dasavena.com',
+    name: 'Bob Esponja Cuadrado',
+    phone: '33-32-22-44-55',
+    celular: '33-24-98-65-55'
   }
 ];
 
@@ -199,7 +163,7 @@ const Page = () => {
     <>
       <Head>
         <title>
-          Customers | Devias Kit
+          Proveedores | Dasavena
         </title>
       </Head>
       <Box
@@ -218,7 +182,7 @@ const Page = () => {
             >
               <Stack spacing={1}>
                 <Typography variant="h4">
-                  Customers
+                  Proveedores
                 </Typography>
                 <Stack
                   alignItems="center"
@@ -233,7 +197,7 @@ const Page = () => {
                       </SvgIcon>
                     )}
                   >
-                    Import
+                    Importar
                   </Button>
                   <Button
                     color="inherit"
@@ -243,7 +207,7 @@ const Page = () => {
                       </SvgIcon>
                     )}
                   >
-                    Export
+                    Exportar
                   </Button>
                 </Stack>
               </Stack>
@@ -256,7 +220,7 @@ const Page = () => {
                   )}
                   variant="contained"
                 >
-                  Add
+                  Agregar
                 </Button>
               </div>
             </Stack>
