@@ -1,9 +1,9 @@
-import { useCallback, useState } from 'react';
-import Head from 'next/head';
-import NextLink from 'next/link';
-import { useRouter } from 'next/navigation';
-import { useFormik } from 'formik';
-import * as Yup from 'yup';
+import { useCallback, useState } from "react";
+import Head from "next/head";
+import NextLink from "next/link";
+import { useRouter } from "next/navigation";
+import { useFormik } from "formik";
+import * as Yup from "yup";
 import {
   Alert,
   Box,
@@ -14,114 +14,78 @@ import {
   Tab,
   Tabs,
   TextField,
-  Typography
-} from '@mui/material';
-import { useAuth } from 'src/hooks/use-auth';
-import { Layout as AuthLayout } from 'src/layouts/auth/layout';
+  Typography,
+} from "@mui/material";
+import { useAuth } from "src/hooks/use-auth";
+import { Layout as AuthLayout } from "src/layouts/auth/layout";
 
 const Page = () => {
   const router = useRouter();
   const auth = useAuth();
-  const [method, setMethod] = useState('email');
+  const [method, setMethod] = useState("email");
   const formik = useFormik({
     initialValues: {
-      email: 'demo@devias.io',
-      password: 'Password123!',
-      submit: null
+      email: "demo@devias.io",
+      password: "Password123!",
+      submit: null,
     },
     validationSchema: Yup.object({
-      email: Yup
-        .string()
-        .email('Must be a valid email')
-        .max(255)
-        .required('Email is required'),
-      password: Yup
-        .string()
-        .max(255)
-        .required('Password is required')
+      email: Yup.string().email("Agrega un correo ya registrado").max(255).required("El correo es necesario"),
+      password: Yup.string().max(255).required("La contraseña es necesaria"),
     }),
     onSubmit: async (values, helpers) => {
       try {
         await auth.signIn(values.email, values.password);
-        router.push('/');
+        router.push("/");
       } catch (err) {
         helpers.setStatus({ success: false });
         helpers.setErrors({ submit: err.message });
         helpers.setSubmitting(false);
       }
-    }
+    },
   });
 
-  const handleMethodChange = useCallback(
-    (event, value) => {
-      setMethod(value);
-    },
-    []
-  );
+  const handleMethodChange = useCallback((event, value) => {
+    setMethod(value);
+  }, []);
 
-  const handleSkip = useCallback(
-    () => {
-      auth.skip();
-      router.push('/');
-    },
-    [auth, router]
-  );
+  const handleSkip = useCallback(() => {
+    auth.skip();
+    router.push("/");
+  }, [auth, router]);
 
   return (
     <>
       <Head>
-        <title>
-          Login | Dasavena
-        </title>
+        <title>Login | Dasavena</title>
       </Head>
       <Box
         sx={{
-          backgroundColor: 'background.paper',
-          flex: '1 1 auto',
-          alignItems: 'center',
-          display: 'flex',
-          justifyContent: 'center'
+          backgroundColor: "background.paper",
+          flex: "1 1 auto",
+          alignItems: "center",
+          display: "flex",
+          justifyContent: "center",
         }}
       >
         <Box
           sx={{
             maxWidth: 550,
             px: 3,
-            py: '100px',
-            width: '100%'
+            py: "100px",
+            width: "100%",
           }}
         >
           <div>
-            <Stack
-              spacing={1}
-              sx={{ mb: 3 }}
-            >
-              <Typography variant="h4">
-                Login para Proveed
-              </Typography>
-              <Typography
-                color="text.secondary"
-                variant="body2"
-              >
-                
-              </Typography>
+            <Stack spacing={1} sx={{ mb: 3 }}>
+              <Typography variant="h4">Login para Proveedores</Typography>
+              <Typography color="text.secondary" variant="body2"></Typography>
             </Stack>
-            <Tabs
-              onChange={handleMethodChange}
-              sx={{ mb: 3 }}
-              value={method}
-            >
-              <Tab
-                label="Correo Electrónico"
-                value="email"
-              />
-
+            <Tabs onChange={handleMethodChange} sx={{ mb: 3 }} value={method}>
+              <Tab label="Correo Electrónico" value="email" />
             </Tabs>
-            {method === 'email' && (
-              <form
-                noValidate
-                onSubmit={formik.handleSubmit}
-              >
+            {method === "email" && (
+              <form noValidate onSubmit={formik.handleSubmit}>
                 <Stack spacing={3}>
                   <TextField
                     error={!!(formik.touched.email && formik.errors.email)}
@@ -147,51 +111,23 @@ const Page = () => {
                   />
                 </Stack>
                 <FormHelperText sx={{ mt: 1 }}>
-                  Si aun no tienes cuenta, contactanós a través de nuestro correo electrónico: soporte@dasavena.com
+                  Si aun no tienes cuenta,contactanós a través de nuestro correo electrónico:
+                  soporte@dasavena.com
                 </FormHelperText>
                 {formik.errors.submit && (
-                  <Typography
-                    color="error"
-                    sx={{ mt: 3 }}
-                    variant="body2"
-                  >
+                  <Typography color="error" sx={{ mt: 3 }} variant="body2">
                     {formik.errors.submit}
                   </Typography>
                 )}
-                <Button
-                  fullWidth
-                  size="large"
-                  sx={{ mt: 3 }}
-                  type="submit"
-                  variant="contained"
-                >
+                <Button fullWidth size="large" sx={{ mt: 3 }} type="submit" variant="contained">
                   Continuar
                 </Button>
-                <Button
-                  fullWidth
-                  size="large"
-                  sx={{ mt: 3 }}
-                  onClick={handleSkip}
-                >
-                  Skip authentication
-                </Button>
-                <Alert
-                  color="primary"
-                  severity="info"
-                  sx={{ mt: 3 }}
-                >
-                  <div>
-                    You can use <b>demo@devias.io</b> and password <b>Password123!</b>
-                  </div>
-                </Alert>
+             
               </form>
             )}
-            {method === 'phoneNumber' && (
+            {method === "phoneNumber" && (
               <div>
-                <Typography
-                  sx={{ mb: 1 }}
-                  variant="h6"
-                >
+                <Typography sx={{ mb: 1 }} variant="h6">
                   Not available in the demo
                 </Typography>
                 <Typography color="text.secondary">
@@ -206,10 +142,6 @@ const Page = () => {
   );
 };
 
-Page.getLayout = (page) => (
-  <AuthLayout>
-    {page}
-  </AuthLayout>
-);
+Page.getLayout = (page) => <AuthLayout>{page}</AuthLayout>;
 
 export default Page;

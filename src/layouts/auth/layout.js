@@ -68,38 +68,47 @@ export const Layout = (props) => {
             }
           }}
         >
-          <Box sx={{ p: 3 }}>
-            <Typography
-              align="center"
-              color="inherit"
-              sx={{
-                fontSize: '24px',
-                lineHeight: '32px',
-                mb: 1
-              }}
-              variant="h1"
-            >
-              Bienvenido al{' '}
-              <Box
-                component="a"
-                sx={{ color: '#15B79E' }}
-                target="_blank"
-              >
-                panel de administración de Dasavena
-              </Box>
-            </Typography>
-            <Typography
-              align="center"
-              sx={{ mb: 3 }}
-              variant="subtitle1"
-            >
-              Un panel para tu mayor facilidad como proveedor.
-            </Typography>
-            <img
-              alt=""
-              src="/assets/logos/logo-dasavena.png"
-            />
-          </Box>
+          <Box
+  sx={{
+    p: 3,
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+  }}
+>
+  <Typography
+    align="center"
+    color="inherit"
+    sx={{
+      fontSize: '24px',
+      lineHeight: '32px',
+      mb: 1
+    }}
+    variant="h1"
+  >
+    Bienvenido al{' '}
+    <Box
+      component="a"
+      sx={{ color: '#15B79E' }}
+      target="_blank"
+    >
+      panel de administración de Dasavena
+    </Box>
+  </Typography>
+  <Typography
+    align="center"
+    sx={{ mb: 3 }}
+    variant="subtitle1"
+  >
+    Un panel para tu mayor facilidad como proveedor.
+  </Typography>
+  <img
+    alt=""
+    src="/assets/logos/logo-dasavena.png"
+  />
+</Box>
+
         </Grid>
       </Grid>
     </Box>

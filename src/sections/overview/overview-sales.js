@@ -72,14 +72,14 @@ const useChartOptions = () => {
         show: true
       },
       categories: [
-        'Jan',
+        'Ene',
         'Feb',
         'Mar',
         'Apr',
         'May',
         'Jun',
         'Jul',
-        'Aug',
+        'Ago',
         'Sep',
         'Oct',
         'Nov',
@@ -111,20 +111,8 @@ export const OverviewSales = (props) => {
   return (
     <Card sx={sx}>
       <CardHeader
-        action={(
-          <Button
-            color="inherit"
-            size="small"
-            startIcon={(
-              <SvgIcon fontSize="small">
-                <ArrowPathIcon />
-              </SvgIcon>
-            )}
-          >
-            Sync
-          </Button>
-        )}
-        title="Sales"
+        
+        title="Pagos"
       />
       <CardContent>
         <Chart
@@ -137,17 +125,7 @@ export const OverviewSales = (props) => {
       </CardContent>
       <Divider />
       <CardActions sx={{ justifyContent: 'flex-end' }}>
-        <Button
-          color="inherit"
-          endIcon={(
-            <SvgIcon fontSize="small">
-              <ArrowRightIcon />
-            </SvgIcon>
-          )}
-          size="small"
-        >
-          Overview
-        </Button>
+        
       </CardActions>
     </Card>
   );

@@ -21,7 +21,7 @@ export const OverviewBudget = (props) => {
               color="text.secondary"
               variant="overline"
             >
-              Budget
+               Total de pago de proveedores
             </Typography>
             <Typography variant="h4">
               {value}
@@ -68,7 +68,7 @@ export const OverviewBudget = (props) => {
               color="text.secondary"
               variant="caption"
             >
-              Since last month
+              Mensual
             </Typography>
           </Stack>
         )}
