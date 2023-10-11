@@ -25,7 +25,8 @@ export const json = {
         "title": {
          "es": "Ingrese el documento en formato PDF del RFC"
         },
-        "isRequired": true
+        "isRequired": true,
+        "acceptedTypes": ".pdf"
        },
        {
         "type": "file",
@@ -33,7 +34,8 @@ export const json = {
         "title": {
          "es": "Ingrese el documento en formato PDF del Comprobante de Domicilio"
         },
-        "isRequired": true
+        "isRequired": true,
+        "acceptedTypes": ".pdf"
        },
        {
         "type": "file",
@@ -41,7 +43,8 @@ export const json = {
         "title": {
          "es": "Ingrese el documento en formato PDF de la Carta Grantía"
         },
-        "isRequired": true
+        "isRequired": true,
+        "acceptedTypes": ".pdf"
        },
        {
         "type": "file",
@@ -49,7 +52,8 @@ export const json = {
         "title": {
          "es": "Ingrese el documento en formato PDF de la Ficha Técnica del Producto"
         },
-        "isRequired": true
+        "isRequired": true,
+        "acceptedTypes": ".pdf"
        },
        {
         "type": "file",
@@ -57,7 +61,8 @@ export const json = {
         "title": {
          "es": "Ingrese el documento en formato PDF de la Carta de Revisión de Metales"
         },
-        "isRequired": true
+        "isRequired": true,
+        "acceptedTypes": ".pdf"
        },
        {
         "type": "file",
@@ -65,7 +70,8 @@ export const json = {
         "title": {
          "es": "Ingrese el documento en formato PDF de la Carta Declaración"
         },
-        "isRequired": true
+        "isRequired": true,
+        "acceptedTypes": ".pdf"
        },
        {
         "type": "file",
@@ -73,7 +79,8 @@ export const json = {
         "title": {
          "es": "Ingrese el documento en formato PDF de la Información Nutrimental"
         },
-        "isRequired": true
+        "isRequired": true,
+        "acceptedTypes": ".pdf"
        }
       ],
       "title": {
