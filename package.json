@@ -22,6 +22,7 @@
     "@mui/lab": "5.0.0-alpha.120",
     "@mui/material": "5.11.10",
     "@mui/system": "5.11.9",
+    "@mui/x-data-grid": "^6.16.1",
     "@mui/x-date-pickers": "5.0.19",
     "apexcharts": "3.37.0",
     "date-fns": "2.29.3",
@@ -32,6 +33,7 @@
     "react": "18.2.0",
     "react-apexcharts": "1.4.0",
     "react-dom": "18.2.0",
+    "react-table": "^7.8.0",
     "simplebar-react": "^3.2.1",
     "survey-react-ui": "^1.9.111",
     "yup": "1.0.0"

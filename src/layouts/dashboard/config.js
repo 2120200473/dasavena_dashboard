@@ -46,16 +46,7 @@ export const items = [
     )
   },
   {
-    title: 'Opciones',
-    path: '/settings',
-    icon: (
-      <SvgIcon fontSize="small">
-        <CogIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Login',
+    title: 'Cerrar Sesión',
     path: '/auth/login',
     icon: (
       <SvgIcon fontSize="small">
@@ -63,22 +54,4 @@ export const items = [
       </SvgIcon>
     )
   },
-  {
-    title: 'Register',
-    path: '/auth/register',
-    icon: (
-      <SvgIcon fontSize="small">
-        <UserPlusIcon />
-      </SvgIcon>
-    )
-  },
-  {
-    title: 'Error',
-    path: '/404',
-    icon: (
-      <SvgIcon fontSize="small">
-        <XCircleIcon />
-      </SvgIcon>
-    )
-  }
 ];
