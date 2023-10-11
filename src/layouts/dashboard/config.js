@@ -28,7 +28,7 @@ export const items = [
     )
   },
   {
-    title: 'Compañias',
+    title: 'Expediente Digital',
     path: '/companies',
     icon: (
       <SvgIcon fontSize="small">

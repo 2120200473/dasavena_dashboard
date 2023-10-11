@@ -10,11 +10,10 @@ import {
 } from '@mui/material';
 
 const user = {
-  avatar: '/assets/avatars/avatar-anika-visser.png',
-  city: 'Los Angeles',
-  country: 'USA',
+  city: 'Guadalajara, Jalisco',
+  country: 'Mexico',
   jobTitle: 'Senior Developer',
-  name: 'Anika Visser',
+  name: 'Dasavena Campos',
   timezone: 'GTM-7'
 };
 
@@ -28,14 +27,7 @@ export const AccountProfile = () => (
           flexDirection: 'column'
         }}
       >
-        <Avatar
-          src={user.avatar}
-          sx={{
-            height: 80,
-            mb: 2,
-            width: 80
-          }}
-        />
+        
         <Typography
           gutterBottom
           variant="h5"
@@ -56,14 +48,7 @@ export const AccountProfile = () => (
         </Typography>
       </Box>
     </CardContent>
-    <Divider />
-    <CardActions>
-      <Button
-        fullWidth
-        variant="text"
-      >
-        Upload picture
-      </Button>
-    </CardActions>
+
+    
   </Card>
 );

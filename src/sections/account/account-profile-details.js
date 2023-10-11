@@ -11,33 +11,15 @@ import {
   Unstable_Grid2 as Grid
 } from '@mui/material';
 
-const states = [
-  {
-    value: 'alabama',
-    label: 'Alabama'
-  },
-  {
-    value: 'new-york',
-    label: 'New York'
-  },
-  {
-    value: 'san-francisco',
-    label: 'San Francisco'
-  },
-  {
-    value: 'los-angeles',
-    label: 'Los Angeles'
-  }
-];
+
 
 export const AccountProfileDetails = () => {
   const [values, setValues] = useState({
-    firstName: 'Anika',
-    lastName: 'Visser',
-    email: 'demo@devias.io',
-    phone: '',
-    state: 'los-angeles',
-    country: 'USA'
+    firstName: 'Dasavena',
+    lastName: 'Campos',
+    email: 'joel@dasavena.com',
+    clave: '12345678',
+    activo: 'granos de maiz',
   });
 
   const handleChange = useCallback(
@@ -65,8 +47,8 @@ export const AccountProfileDetails = () => {
     >
       <Card>
         <CardHeader
-          subheader="The information can be edited"
-          title="Profile"
+          subheader="La Información puede ser editada"
+          title="Perfil"
         />
         <CardContent sx={{ pt: 0 }}>
           <Box sx={{ m: -1.5 }}>
@@ -120,11 +102,11 @@ export const AccountProfileDetails = () => {
               >
                 <TextField
                   fullWidth
-                  label="Phone Number"
-                  name="phone"
+                  label="Activo"
+                  name="activo"
                   onChange={handleChange}
-                  type="number"
-                  value={values.phone}
+                  required
+                  value={values.activo}
                 />
               </Grid>
               <Grid
@@ -133,37 +115,15 @@ export const AccountProfileDetails = () => {
               >
                 <TextField
                   fullWidth
-                  label="Country"
-                  name="country"
+                  label="Clave"
+                  name="clave"
                   onChange={handleChange}
                   required
-                  value={values.country}
+                  value={values.clave}
                 />
               </Grid>
-              <Grid
-                xs={12}
-                md={6}
-              >
-                <TextField
-                  fullWidth
-                  label="Select State"
-                  name="state"
-                  onChange={handleChange}
-                  required
-                  select
-                  SelectProps={{ native: true }}
-                  value={values.state}
-                >
-                  {states.map((option) => (
-                    <option
-                      key={option.value}
-                      value={option.value}
-                    >
-                      {option.label}
-                    </option>
-                  ))}
-                </TextField>
-              </Grid>
+              
+
             </Grid>
           </Box>
         </CardContent>
