@@ -73,7 +73,7 @@ export const CustomersTable = (props) => {
                   Celular
                 </TableCell>
                 <TableCell>
-                  Signed Up
+                  Rol
                 </TableCell>
               </TableRow>
             </TableHead>
